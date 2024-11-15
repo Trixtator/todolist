@@ -1,0 +1,43 @@
+.task-card {
+    display: flex;
+    justify-content: space-between; /* Menjaga jarak antara elemen */
+    align-items: center; /* Menjaga elemen sejajar secara vertikal */
+    padding: 15px; /* Tambahkan padding untuk ruang di dalam kartu */
+    border: 1px solid #ddd; /* Tambahkan border untuk kartu */
+    border-radius: 5px; /* Tambahkan border-radius untuk sudut yang halus */
+    background-color: white; /* Warna latar belakang putih */
+}
+
+.task-info {
+    flex-grow: 1; /* Membuat elemen ini tumbuh untuk mengisi ruang yang tersedia */
+    margin-right: 15px; /* Tambahkan margin untuk jarak antara info dan tombol */
+}
+
+.progress-circle {
+    width: 30px; /* Ukuran lingkaran progres */
+    height: 30px; /* Ukuran lingkaran progres */
+    border-radius: 50%; /* Membuat lingkaran */
+    background-color: #007bff; /* Warna lingkaran */
+    margin-right: 10px; /* Jarak antara lingkaran dan tombol */
+}
+
+.edit-btn, .delete-btn {
+    background: none; /* Menghilangkan latar belakang tombol */
+    border: none; /* Menghilangkan border tombol */
+    cursor: pointer; /* Menunjukkan bahwa ini adalah tombol yang dapat diklik */
+    color: #007bff; /* Warna ikon */
+    font-size: 1.5em; /* Ukuran ikon */
+    margin-left: 10px; /* Jarak antara tombol */
+}
+
+@media (max-width: 768px) {
+    .task-card {
+        flex-direction: column; /* Mengubah arah flex menjadi kolom pada layar kecil */
+        align-items: flex-start; /* Menjaga elemen sejajar di kiri */
+    }
+
+    .task-info {
+        margin-right: 0; /* Menghilangkan margin pada layar kecil */
+        margin-bottom: 10px; /* Menambahkan margin bawah untuk jarak */
+    }
+}
